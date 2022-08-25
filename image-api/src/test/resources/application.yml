@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: images-api
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:OrderDB
+    username:
+    password:
+    jpa:
+      generate-ddl: 'false'
+      database: H2
+      properties:
+        hibernate:
+          format_sql: true
+          order_inserts: true
+          order_updates: true
+          jdbc:
+            batch_size: 100
+        org:
+          hibernate:
+            flushMode: COMMIT
+      database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+      hibernate:
+        ddl-auto: none
+      show-sql: true
+  sql:
+    init:
+      continue-on-error: 'false'
+      platform: postgresql
+qr:
+  code:
+    width: 200
+    height: 200

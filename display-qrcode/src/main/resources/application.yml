@@ -1,0 +1,5 @@
+apis:
+  image: http://localhost:8082/image_api/v1
+server:
+  port: 8085
+
